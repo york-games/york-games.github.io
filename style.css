@@ -1,0 +1,106 @@
+/* TODO:
+    - Probably some better fonts (see Google Fonts)
+    - Colours need a lot of tweaking, maybe need an accent colour
+      to use for links & such
+    - Style "on/off campus" links when they're pressed
+*/
+
+body {
+    background: #333;
+    color: #eee;
+    font-family: sans-serif;
+}
+
+main {
+    /* Center in the screen for large displays */
+    max-width: 800px;
+    margin-left:  auto;
+    margin-right: auto;
+
+    margin-bottom: 30px;
+
+    border: 1px solid grey;
+    border-radius: 2px;
+    padding: 1px;
+    background: #222;
+}
+
+footer {
+    max-width: 800px;
+    margin-left:  auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+footer img {
+    height: 64px;
+    /* TODO: at some point fix it so that the heights are all equal
+       and the widths always fit horizontally in the footer (scale
+       responsively) */
+}
+
+h1 {
+    text-align: center;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+#on-campus, #windows, #mac, #linux {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+#campus-select {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#campus-select a {
+    display: inline-block;
+    flex-grow: 1;
+    background: #222;
+    border: 1px solid white;
+    text-align: center;
+    padding: 5px;
+    margin: 2px;
+
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#on-campus, #off-campus {
+    display: none;
+}
+
+main[data-campus="on-campus"]   #on-campus  {display: block;}
+main[data-campus="off-campus"]  #off-campus {display: block;}
+
+#platform-select {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+#platform-select a img {
+    height: 10vw;
+    
+}
+
+#windows, #mac, #linux {
+    display: none;
+}
+main[data-platform="windows"]   #windows    {display: block;}
+main[data-platform="mac"]       #mac        {display: block;}
+main[data-platform="linux"]     #linux      {display: block;}

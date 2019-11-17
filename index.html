@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>UoY.gg</title>
+    <script>
+        function oncampus() {
+            // select on-campus
+            document.querySelector("main").setAttribute("data-campus", "on-campus")
+        }
+        function offcampus() {
+            // select off-campus
+            document.querySelector("main").setAttribute("data-campus", "off-campus")
+        }
+
+        function setplatform(plat) {
+            // open the specified platform's instructions
+            document.querySelector("main").setAttribute("data-platform", plat)
+        }
+
+        function apply_url() {
+            // If we've been loaded from /#offcampus or /#oncampus, automatically expand the
+            // appropriate instructions
+            if (location.hash) {
+                if (location.hash == "#offcampus") {
+                    offcampus()
+                }
+                else if (location.hash == "#oncampus") {
+                    oncampus()
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="apply_url()">
+    <h1>UoY.gg</h1>
+    <main>
+        <div id="campus-select">
+            <a href="#oncampus" onclick="oncampus()">On Campus</a>
+            <a href="#offcampus" onclick="offcampus()">Off Campus</a>
+        </div>
+        <div id="on-campus">
+
+        </div>
+        <div id="off-campus">
+            <div id="platform-select">
+                <!-- TODO: these logos need to look more uniform, and have a more obvious "hover" and activated look 
+                     probably also need to add a trademark disclaimer? -->
+                <a href="#" onclick="setplatform('windows')"><img src="/img/windows.svg" alt="Windows logo"></a> 
+                <a href="#" onclick="setplatform('mac')"><img src="/img/apple.svg" alt="Apple logo"></a>
+                <a href="#" onclick="setplatform('linux')"><img src="/img/tux.svg" alt="Linux penguin"></a>
+            </div>
+            <div id="windows">
+                <h2>Windows</h2>
+
+            </div>
+            <div id="mac">
+                <h2>MacOS</h2>
+                
+                <h3>1. Set up SSH tunnel</h3>
+                If you have not registered for the University <a href="https://www.york.ac.uk/it-services/services/ssh/">SSH service</a> you will need to do so. 
+                Open Terminal and run the following command, replacing <code>&lt;itsusername&gt;</code> with your University username. <a href="ssh-tunnels.html" class="aside">(What does this do?)<!--at some point an explainer on SSH would be good for curious users, if we dont' end up using PulseSecure--></a>
+                <pre>ssh -NfL 25565:apollohacksoc.york.ac.uk:25565 <em>&lt;itsusername&gt;</em>@ssh.york.ac.uk</pre>
+                You can close Terminal once you have logged in. You will need to re-run this command every time you log in.
+
+                <h3>2. Connect to localhost</h3>
+                Add a new server in Minecraft with the address <code>localhost</code>. You should be able to connect to it 
+
+            </div>
+            <div id="linux">
+                <h2>Linux</h2>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <a href="https://shocksoc.org/"><img src="https://shocksoc.org/img/Banner/logo_white.png" alt="ShockSoc logo"></a>
+        <a href="https://www.hacksoc.org"><img src="https://www.hacksoc.org/static/images/logo-full.png"></a> <!-- TODO: I'll make a white version of the HackSoc logo to go here -->
+    </footer>
+</body>
+</html>
