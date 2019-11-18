@@ -48,8 +48,8 @@
     <h1 id="uoytitle">UoY.gg</h1>
     <main>
         <div id="campus-select">
-            <a href="#oncampus" onclick="oncampus()">On Campus</a>
-            <a href="#offcampus" onclick="offcampus()">Off Campus</a>
+            <a id="oncampuspressed" href="#oncampus" onclick="oncampus()">On Campus</a>
+            <a id="offcampuspressed" href="#offcampus" onclick="offcampus()">Off Campus</a> <!--Added additional id's. Could probably improve this-->
         </div>
         <div id="on-campus">
 
@@ -58,9 +58,9 @@
             <div id="platform-select">
                 <!-- TODO: these logos need to look more uniform, and have a more obvious "hover" and activated look
                      probably also need to add a trademark disclaimer? -->
-                <a href="#" onclick="setplatform('windows')"><img src="img/windows.svg" alt="Windows logo" width="64px" height="64px"></a>
-                <a href="#" onclick="setplatform('mac')"><img src="img/apple.svg" alt="Apple logo" width="64px" height="64px"></a>
-                <a href="#" onclick="setplatform('linux')"><img src="img/tux.svg" alt="Linux penguin" width="64px" height="64px"></a>
+                <a id="windowsimg" href="#" onclick="setplatform('windows')"><img src="img/windows.svg" alt="Windows logo" width="64px" height="64px"></a>
+                <a id="appleimg" href="#" onclick="setplatform('mac')"><img src="img/apple.svg" alt="Apple logo" width="64px" height="64px"></a>
+                <a id="linuximg" href="#" onclick="setplatform('linux')"><img src="img/tux.svg" alt="Linux penguin" width="64px" height="64px"></a>
             </div>
             <div id="windows">
                 <h2>Windows</h2>
