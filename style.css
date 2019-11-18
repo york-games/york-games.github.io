@@ -64,13 +64,28 @@ pre {
     white-space: pre-wrap;
 }
 
-#uoytitle {
+#uoytitlefront:hover{
+  color: white;
+}
+
+.uoytitle {
   /* vw produces cool scaling effect. Dosen't work on Edge/Internet Explorer */
+    color: white;
+    transition: 0.5s;
     font-family: 'Zilla Slab Highlight';
     text-shadow: 0 0 80px black, 4vw 2vw #4289ad ,-3vw -2vw #a291f2;
     font-stretch:extra-expanded;
     font-size: 95px;
     margin: 60px;
+}
+
+
+
+
+.uoytitle:hover{
+  transition:0.5s;
+  color: #61cfba;
+  font-style: normal;
 }
 
 
@@ -92,7 +107,6 @@ pre {
   box-shadow: 0 0 20px black;
 }
 
-
 #campus-select {
     display: flex;
     flex-direction: row;
@@ -112,6 +126,7 @@ pre {
     text-decoration: none;
     font-weight: bold;
     transition-duration: 0.5s;
+    border-bottom: 4px, solid, #4289ad;
 }
 
 #campus-select a:hover{
@@ -121,15 +136,13 @@ pre {
     color:black;
 }
 
-
-
 #on-campus, #off-campus {
     display: none;
 }
 
-main[data-platform="windows"] #windowsimg img {color:black; background-color:white; border-radius: 20px;}
-main[data-platform="linux"] #linuximg img {color:black; background-color:white; border-radius: 20px;}
-main[data-platform="mac"] #appleimg img {color:black; background-color:white; border-radius: 20px;}
+main[data-platform="windows"] #windowsimg img {color:black; background-color:white; border-radius: 20px;box-shadow: 0 0 20px black;}
+main[data-platform="linux"] #linuximg img {color:black; background-color:white; border-radius: 20px;box-shadow: 0 0 20px black;}
+main[data-platform="mac"] #appleimg img {color:black; background-color:white; border-radius: 20px;box-shadow: 0 0 20px black;;}
 
 main[data-campus="on-campus"]   #oncampuspressed  {color:black; background-color:white;}
 main[data-campus="off-campus"]  #offcampuspressed {color:black; background-color:white;}
@@ -164,4 +177,42 @@ main[data-platform="linux"]     #linux      {display: block;}
         flex-direction: column;
         align-items: center;
     }
+}
+
+/*Diamond shape for front page*/
+
+/* Index page css */
+
+
+#portal {
+  max-width: 850px;
+  margin-left:  auto;
+  margin-right: auto;
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.diamondContainer img{
+  width: calc(50px + 8vw);
+  height: calc(50px + 8vw);
+}
+
+.diamondContainer{
+  position: relative;
+  text-align: center;
+}
+
+.centered{
+  position:absolute:
+  left:40px;
+  top: 500px;
+}
+
+.centered a{
+  position:absolute:
+  left:40px;
+  top: 500px;
 }
