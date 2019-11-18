@@ -8,7 +8,7 @@
 body {
     background: #333;
     color: #eee;
-    font-family: sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 main {
@@ -29,7 +29,6 @@ footer {
     max-width: 800px;
     margin-left:  auto;
     margin-right: auto;
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -47,8 +46,26 @@ h1 {
     text-align: center;
 }
 
+a{
+  color: #4289ad;
+  font-style: normal;
+}
+
+a:hover{
+  color: #3b48bf;
+  font-style: normal;
+}
+
 pre {
     white-space: pre-wrap;
+}
+
+#uoytitle {
+  font-family: 'Zilla Slab Highlight', cursive;
+  text-shadow: 0 0 100px black ;
+  font-stretch:extra-expanded;
+  font-size: 85px;
+  margin: 30px;
 }
 
 #on-campus, #windows, #mac, #linux {
