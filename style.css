@@ -94,8 +94,8 @@ main[data-campus="off-campus"]  #off-campus {display: block;}
 }
 
 #platform-select a img {
-    height: 10vw;
-    
+    /*height: 10vw;*/ /*TODO Create a better icon scaling for Windows, Linux & Mac Icons*/
+
 }
 
 #windows, #mac, #linux {

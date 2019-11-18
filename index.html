@@ -47,11 +47,11 @@
         </div>
         <div id="off-campus">
             <div id="platform-select">
-                <!-- TODO: these logos need to look more uniform, and have a more obvious "hover" and activated look 
+                <!-- TODO: these logos need to look more uniform, and have a more obvious "hover" and activated look
                      probably also need to add a trademark disclaimer? -->
-                <a href="#" onclick="setplatform('windows')"><img src="/img/windows.svg" alt="Windows logo"></a> 
-                <a href="#" onclick="setplatform('mac')"><img src="/img/apple.svg" alt="Apple logo"></a>
-                <a href="#" onclick="setplatform('linux')"><img src="/img/tux.svg" alt="Linux penguin"></a>
+                <a href="#" onclick="setplatform('windows')"><img src="img/windows.svg" alt="Windows logo" width="64px" height="64px"></a>
+                <a href="#" onclick="setplatform('mac')"><img src="img/apple.svg" alt="Apple logo" width="64px" height="64px"></a>
+                <a href="#" onclick="setplatform('linux')"><img src="img/tux.svg" alt="Linux penguin" width="64px" height="64px"></a>
             </div>
             <div id="windows">
                 <h2>Windows</h2>
@@ -59,15 +59,15 @@
             </div>
             <div id="mac">
                 <h2>MacOS</h2>
-                
+
                 <h3>1. Set up SSH tunnel</h3>
-                If you have not registered for the University <a href="https://www.york.ac.uk/it-services/services/ssh/">SSH service</a> you will need to do so. 
+                If you have not registered for the University <a href="https://www.york.ac.uk/it-services/services/ssh/">SSH service</a> you will need to do so.
                 Open Terminal and run the following command, replacing <code>&lt;itsusername&gt;</code> with your University username. <a href="ssh-tunnels.html" class="aside">(What does this do?)<!--at some point an explainer on SSH would be good for curious users, if we dont' end up using PulseSecure--></a>
                 <pre>ssh -NfL 25565:apollohacksoc.york.ac.uk:25565 <em>&lt;itsusername&gt;</em>@ssh.york.ac.uk</pre>
                 You can close Terminal once you have logged in. You will need to re-run this command every time you log in.
 
                 <h3>2. Connect to localhost</h3>
-                Add a new server in Minecraft with the address <code>localhost</code>. You should be able to connect to it 
+                Add a new server in Minecraft with the address <code>localhost</code>. You should be able to connect to it
 
             </div>
             <div id="linux">
