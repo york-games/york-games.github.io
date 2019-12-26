@@ -200,6 +200,21 @@ main[data-platform="linux"]     #linux      {display: block;}
   height: calc(100px + 8vw);
 }
 
+#connectImage {
+  width: calc(25px + 4vw);
+  height: calc(25px + 4vw);
+}
+
+#eventsImage {
+  width: calc(20px + 4vw);
+  height: calc(20px + 4vw);
+}
+
+#wikiImage {
+  width: calc(25px + 4vw);
+  height: calc(25px + 4vw);
+}
+
 .diamondContainer{
   width: calc(100px + 8vw);
   height: calc(100px + 8vw);
@@ -209,7 +224,7 @@ main[data-platform="linux"]     #linux      {display: block;}
 
 .diamondContainer .text {
   color: black;
-  font-size: 15px;
+  font-size: 20px;
   text-shadow: 0 20px 500px black;
   position: absolute;
   margin: 0 auto;
@@ -223,13 +238,21 @@ main[data-platform="linux"]     #linux      {display: block;}
 }
 
 .diamondContainer:hover {
-  color: black;
-  opacity: 0.7;
+  color: blue;
+  opacity: 0.3;
+  transition-duration: 0.5s;
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1200px){
   /*Response when we get to standard phone pixel width*/
     .diamondContainer .text {
-      font-size: 8px;
+      font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 800px){
+  /*Response when we get to standard phone pixel width*/
+    .diamondContainer .text {
+      font-size: 15px;
     }
 }
