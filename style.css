@@ -17,13 +17,12 @@ main {
     max-width: 950px;
     margin-left:  auto;
     margin-right: auto;
-
     margin-bottom: 30px;
-
     border: 1px solid grey;
     border-radius: 2px;
     padding: 1px;
     background: #222;
+    white-space:normal;
 }
 
 footer {
@@ -37,16 +36,11 @@ footer {
 
 footer img {
     height: 64px;
-    /* TODO: at some point fix it so that the heights are all equal
-       and the widths always fit horizontally in the footer (scale
-       responsively) */
 }
 
 h1 {
     text-align: center;
 }
-
-
 
 a{
   color: #4289ad;
@@ -60,7 +54,7 @@ a:hover{
 }
 
 pre {
-    white-space: pre-wrap;
+    white-space: normal;
 }
 
 #uoytitlefront:hover{
@@ -77,9 +71,6 @@ pre {
     font-size: 75px;
     margin: 60px;
 }
-
-
-
 
 .uoytitle:hover{
   transition:0.5s;
@@ -199,7 +190,7 @@ main[data-platform="linux"]     #linux      {display: block;}
   height: calc(100px + 8vw);
 }
 
-#connectImage, #wikiImage, #serverImage {
+#connectImage, #wikiImage {
   width: calc(25px + 4vw);
   height: calc(25px + 4vw);
 }
@@ -207,6 +198,11 @@ main[data-platform="linux"]     #linux      {display: block;}
 #eventsImage {
   width: calc(20px + 4vw);
   height: calc(20px + 4vw);
+}
+
+#serverImage {
+  width: calc(30px + 4vw);
+  height: calc(30px + 4vw);
 }
 
 
