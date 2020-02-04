@@ -14,7 +14,7 @@ body {
 
 main {
     /* Center in the screen for large displays */
-    max-width: 850px;
+    max-width: 950px;
     margin-left:  auto;
     margin-right: auto;
 
@@ -27,12 +27,11 @@ main {
 }
 
 footer {
-    max-width: 850px;
+    max-width: 800px;
     margin-left:  auto;
     margin-right: auto;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-evenly;
 }
 
@@ -89,7 +88,7 @@ pre {
 }
 
 
-#on-campus, #windows, #mac, #linux {
+#on-campus, #windows, #mac, #linux, #about {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
@@ -185,7 +184,7 @@ main[data-platform="linux"]     #linux      {display: block;}
 
 
 #portal {
-  max-width: 850px;
+  max-width: 1100px;
   margin-left:  auto;
   margin-right: auto;
   display:flex;
@@ -200,7 +199,7 @@ main[data-platform="linux"]     #linux      {display: block;}
   height: calc(100px + 8vw);
 }
 
-#connectImage {
+#connectImage, #wikiImage, #serverImage {
   width: calc(25px + 4vw);
   height: calc(25px + 4vw);
 }
@@ -210,10 +209,6 @@ main[data-platform="linux"]     #linux      {display: block;}
   height: calc(20px + 4vw);
 }
 
-#wikiImage {
-  width: calc(25px + 4vw);
-  height: calc(25px + 4vw);
-}
 
 .diamondContainer{
   width: calc(100px + 8vw);
@@ -247,6 +242,7 @@ main[data-platform="linux"]     #linux      {display: block;}
   /*Response when we get to standard phone pixel width*/
     .diamondContainer .text {
       font-size: 17px;
+      flex-direction: grow;
     }
 }
 
@@ -254,5 +250,43 @@ main[data-platform="linux"]     #linux      {display: block;}
   /*Response when we get to standard phone pixel width*/
     .diamondContainer .text {
       font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 650px){
+  /*Response when we get to standard phone pixel width*/
+
+    #portal {
+      /*flex-direction: column;*/
+      align-items: center;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 30px;
+    }
+
+    .diamondContainer img{
+      width: calc(150px + 8vw);
+      height: calc(150px + 8vw);
+    }
+
+    .diamondContainer .text {
+      font-size: 18px;
+    }
+
+    #connectImage, #wikiImage, #serverImage {
+      width: calc(35px + 4vw);
+      height: calc(35px + 4vw);
+    }
+
+    #eventsImage {
+      width: calc(30px + 4vw);
+      height: calc(30px + 4vw);
+    }
+
+    .diamondContainer{
+      width: calc(150px + 8vw);
+      height: calc(150px + 8vw);
+      position: relative;
+      display: inline-block;
     }
 }
