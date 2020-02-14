@@ -81,26 +81,28 @@
                 <br><b>Server URL:</b> https://webvpn.york.ac.uk/
                 <p>Finally click connect, enter your University username and password and Vwulla. You're done! You now have a secure connection.</p>
                 <br>
-                <h3>SSH Connection (Alternative Method)</h3>
-                <p>If you are un-able to establish a VPN connection you can instead use SSH to connect.
-                SSH requires a bit more to setup but is an equally viable alternative. </p>
-                <p style="color:lightBlue; font-size: 14px">Note that when connecting to servers through ssh you should use a local (lan) style connection instead. For Minecraft this is equivalent to using an i.p address of <code>localhost</code></p>
-                <p><b>Make sure you have SSH access</b>
-                <br>To use SSH to connect you must first have SSH access through the university. To request access email: <u>itsupport@york.ac.uk</u> stating that you
-                would like to gain SSH access. For more info visit: <a href="https://www.york.ac.uk/it-services/services/ssh/" target="_blank">link</a><br>
-                <br><b>Enable SSH through Windows</b><br>
-                SSH is not enabled on Windows by default. To enable it start 'Settings' then go to Apps > Apps and Features > Optional Features and choose to add a feature, then select 'openSSH Server & Client'<br>
-                <br><b>Download and run the .bat file provided</b><br>
-                For simplicity we have provided a file you can download and run immediately without any additional setup to establish a secure connection to our gameservers. None of the data inputted is stored or collected. You may recieve a security warning when running the file. Please ignore this, thank you.<br>
-                <br>Download: <a href="https://drive.google.com/file/d/12-irLdnT1UEz2AmW19Oluwmb60ck7r7Q/view?usp=sharing" target="_blank">Secure Download (Google Drive)</a></p>
-                <p><b>Common SSH issues</b><br>
-                <ul>
-  <li><u>It asks for my userid and then crashes</u> > You need to make sure you have openSSH Client & Server installed on your system.</li>
-  <li><u>The program is saying 'Permission denied, please try again'</u> > The most likely scenario is that ssh hasn't been enabled for your account. Email itsupport to gain access to ssh through the university.</li>
-  <li><u>After I type my password the program is left hanging (nothing else happens)</u> > This is what we expect to happen, for some reason windows ssh dosen't prompt you to let you know that the info you entered is correct. You are definately connected though if this happens.</li>
-  <li><u>When I type my password it dosen't show up</u> > This is standard practice for terminal/commandprompt. The password is being entered but it wont show the password being entered for security reasons.</li>
-
-            </div>
+                <details>
+                  <summary class="sshConnectionInfo">SSH Connection (Alternative Method)</summary>
+                  <p>If you are un-able to establish a VPN connection you can instead use SSH to connect.
+                    SSH requires a bit more to setup but is an equally viable alternative. </p>
+                    <p style="color:lightBlue; font-size: 14px">Note that when connecting to servers through ssh you should use a local (lan) style connection instead. For Minecraft this is equivalent to using an i.p address of <code>localhost</code></p>
+                    <p><b>Make sure you have SSH access</b>
+                      <br>To use SSH to connect you must first have SSH access through the university. To request access email: <u>itsupport@york.ac.uk</u> stating that you
+                      would like to gain SSH access. For more info visit: <a href="https://www.york.ac.uk/it-services/services/ssh/" target="_blank">link</a><br>
+                      <br><b>Enable SSH through Windows</b><br>
+                      SSH is not enabled on Windows by default. To enable it start 'Settings' then go to Apps > Apps and Features > Optional Features and choose to add a feature, then select 'openSSH Server & Client'<br>
+                      <br><b>Download and run the .bat file provided</b><br>
+                      For simplicity we have provided a file you can download and run immediately without any additional setup to establish a secure connection to our gameservers. None of the data inputted is stored or collected. You may recieve a security warning when running the file. Please ignore this, thank you.<br>
+                      <br>Download: <a href="https://drive.google.com/file/d/12-irLdnT1UEz2AmW19Oluwmb60ck7r7Q/view?usp=sharing" target="_blank">Secure Download (Google Drive)</a></p>
+                      <p><b>Common SSH issues</b><br>
+                      <ul>
+                        <li><u>It asks for my userid and then crashes</u> > You need to make sure you have openSSH Client & Server installed on your system.</li>
+                        <li><u>The program is saying 'Permission denied, please try again'</u> > The most likely scenario is that ssh hasn't been enabled for your account. Email itsupport to gain access to ssh through the university.</li>
+                        <li><u>After I type my password the program is left hanging (nothing else happens)</u> > This is what we expect to happen, for some reason windows ssh dosen't prompt you to let you know that the info you entered is correct. You are definately connected though if this happens.</li>
+                        <li><u>When I type my password it dosen't show up</u> > This is standard practice for terminal/commandprompt. The password is being entered but it wont show the password being entered for security reasons.</li>
+                      </ul>
+                </details>
+              </div>
             <div id="mac">
                 <h2>MacOS</h2>
 
@@ -114,9 +116,10 @@
                 <br><b>Server URL:</b> https://webvpn.york.ac.uk/
                 <p>Finally click connect, enter your University username and password and Vwulla. You're done! You now have a secure connection.</p>
                 <br>
-
-                <h3>SSH Connection (Alernative Method)</h3>
-                <p>COMING SOON</p>
+                <details>
+                  <summary class="sshConnectionInfo">SSH Connection Info (Alternative Method)</summary>
+                    <p>COMING SOON</p>
+                </details>
 
             </div>
             <div id="linux">
@@ -126,8 +129,10 @@
                 <p>VPN Connections are available for Ubuntu, CentOS, Redhat, Fedora etc... or any other DEB/RPM based distro of linux.
                 Instructions on how to install are available through the universities official help pages: <a href="https://footprints.york.ac.uk/MRcgi/MRTicketPage.pl?MR=48664&PROJECTID=1" target="_blank">VPN Connection Instructions</a>
 
-                <h3>SSH Connection (Alternative Method)</h3>
-                <p>COMING SOON</p>
+                <details>
+                  <summary class="sshConnectionInfo">SSH Connection Info (Alternative Method)</summary>
+                    <p>COMING SOON</p>
+                </details>
             </div>
         </div>
     </main>

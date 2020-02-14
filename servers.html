@@ -15,36 +15,76 @@
 
     <title>York.games|Servers</title>
 
+    <script>
+        /*Detects when a server header is pressed and returns it's corresponding
+        index in the array of class 'spoiler' expanding the spoiler outwards.*/
+        function serverHeaderPressed(index) {
+          var spoiler = document.getElementsByClassName("spoiler");
+
+          for (var i in spoiler){
+            if(i == index){ //Only perform action on correct index
+              if(spoiler[i].style.maxHeight == "0px"){
+                spoiler[i].style.maxHeight = "500px"; //Set a new limit for the max height causing the spoiler to expand.
+              } else if(spoiler[i].style.maxHeight == ""){ //Executes for the first time. No value of 'maxHeight' initially set.
+                spoiler[i].style.maxHeight = "500px";
+              } else {
+                spoiler[i].style.maxHeight = "0px"; //Set a new constraint for the max height causing the spoiler to contract.
+              }
+            }
+          }
+        }
+    </script>
 </head>
 
 <body>
 
     <a href="index.html"><h1 href="index.html" class="uoytitle">York.games</h1></a>
-    <!--<main>-->
-    <nobr><div id="serverInfo">
+    <div id="serverInfo">
       <h3>York.games gameservers.</h3>
-      <p>(Hover over or click on a server banner to display detailed information)</p>
-    </div></nobr>
+      <p>(Click on a server banner to display detailed information)</p>
+    </div>
 
     <div class="serverDescriptionBox" style="background:#32435e">
-      <div class="serverHeader">
-        <h3 id="serverDescription">Minecraft</h3>
-        <p id="ip">34.54.23.128</h3>
-        <div class="spoiler">
-            <p>Text Paragraph</p>
-            <p>2nd paragraph</p>
-        </div>
+      <div onclick="serverHeaderPressed(0)" class="serverHeader"> <!--Header title banner-->
+        <h3>Minecraft Modded</h3>
+        <p>mc.york.games</h3>
+      </div>
+      <div class="spoiler"> <!--Class thats expanded upon 'serverHeader' press-->
+        <p>Text Paragraph</p>
+        <p>2nd paragraph</p>
       </div>
     </div>
 
-    <div class="serverDescriptionBox" style="background: #474973" >
-      <div class="serverHeader">
-        <h3 id="serverDescription">Factorio</h3>
-        <p id="ip">fac.fakeip.org</h3>
-        <div class="spoiler">
-            <p>Test Paragraph</p>
-            <p>2nd paragraph</p>
-        </div>
+    <div class="serverDescriptionBox" style="background: #474973">
+      <div onclick="serverHeaderPressed(1)" class="serverHeader">
+        <h3>Factorio</h3>
+        <p>fac.york.games</h3>
+      </div>
+      <div class="spoiler">
+        <p>Content stuff put in here <a href="https://google.co.uk">This is a link</a></p>
+        <p>2nd paragraph</p>
+      </div>
+    </div>
+
+    <div class="serverDescriptionBox" style="background: #325947">
+      <div onclick="serverHeaderPressed(2)" class="serverHeader">
+        <h3>Factorio</h3>
+        <p>mc2.york.games</h3>
+      </div>
+      <div class="spoiler">
+        <p>Content stuff put in here <a href="https://google.co.uk">This is a link</a></p>
+        <p>2nd paragraph</p>
+      </div>
+    </div>
+
+    <div class="serverDescriptionBox" style="background: #3a4d4b">
+      <div onclick="serverHeaderPressed(3)" class="serverHeader">
+        <h3>Events Server</h3>
+        <p>event.york.games</h3>
+      </div>
+      <div class="spoiler">
+        <p>Content stuff put in here <a href="https://google.co.uk">This is a link</a></p>
+        <p>2nd paragraph</p>
       </div>
     </div>
     <!--</main>-->
