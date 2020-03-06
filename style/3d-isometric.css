@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "3D Isometric";
+    src: url('../font/3D_Isometric.otf');
+}
+
+@font-face {
+    font-family: "3D Isometric";
+    src: url('../font/3D_Isometric_Bold.otf');
+    font-weight: bold;
+}

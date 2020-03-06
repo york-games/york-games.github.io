@@ -1,0 +1,83 @@
+/* Colour and font definitions - 
+    where possible don't use font 
+    names or colour values, but 
+    use these instead. */
+:root {
+    --background-color: #FFD019;
+    --accent-1:         #14CCB5;
+    --accent-1-dark:    #09B3A0;    
+    --accent-2:         #FF00EC;
+    --accent-2-dark:    #B312A7;
+    
+    --text:             #363636;
+    --heading:          #222222;
+
+    --font-heading:     'Share Tech Mono';
+    --font-body:        'Dosis', serif;
+    /* --font-body:        'Fira Sans', serif; */
+    /* --font-body:        'Rubik', serif; */
+}
+
+/* colour and font rules first */
+body {
+    font-family:        var(--font-body);
+    color:              var(--text);
+    font-size:          15pt;
+
+    background-color:   var(--background-color);
+
+    text-align:         justify; /* using this might be an a11y concern. */
+}
+
+strong {
+    color:              var(--accent-2-dark);
+    font-weight:        bold;
+}
+
+hr {
+    border:             1px solid var(--text);
+    border-radius:      2px;
+}
+
+/* layout / block element rules */
+
+main {
+    max-width:          800px;
+    
+    margin-left:        auto;
+    margin-right:       auto;
+    margin-top:         50px;
+    margin-bottom:      30px;
+}
+
+img.logo {
+    clear:              both;
+    display:            block;
+
+    margin-top:         15px;
+    margin-bottom:      15px;
+    max-width:          95vw;
+    margin-left:        auto;
+    margin-right:       auto;
+}
+
+footer {
+    max-width:          800px;
+    margin-left:        auto;
+    margin-right:       auto;
+
+    display:            flex;
+    flex-flow:          row wrap;
+    justify-content:    space-evenly;
+}
+
+footer img {
+    /* Make white logos designed for dark backgrounds 
+    into black logos for light backgrounds */
+    filter: invert(1) contrast(0.75);
+    height: 64px;
+}
+
+footer a:hover img {
+    filter: invert(1);
+}
