@@ -1,0 +1,12 @@
+#connect > div:not(#campus-select)              {display: none;}
+#connect[data-campus=oncampus]  > #on-campus    {display: block;}
+#connect[data-campus=offcampus] > #off-campus   {display: block;}
+
+#platform-select > a > img {
+    height: 64px;
+}
+
+#off-campus > div:not(#platform-select)         {display: none;}
+#off-campus[data-platform=windows] > #windows   {display: block;}
+#off-campus[data-platform=mac]     > #mac       {display: block;}
+#off-campus[data-platform=linux]   > #linux     {display: block;}

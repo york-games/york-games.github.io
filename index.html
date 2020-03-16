@@ -12,11 +12,55 @@
 
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/palette.css">
+    <link rel="stylesheet" href="style/connect.css">
+
+    <script src="script/connect.js"></script>
 </head>
 <body>
     <main> <!-- centered body container-->
         <img src="img/yorkgames.svg" alt="york.games" class="logo">
-        
+        <div id="connect">
+            <div id="campus-select">
+                <a onclick="setcampus('on')">On campus</a>
+                <a onclick="setcampus('off')">Off campus</a>
+            </div>
+            <div id="on-campus">
+                <h3>Good news!</h3>
+                <p>No additional setup is required to connect whilst on campus. Simply use the correct IP and port to establish a secure connection</p>
+            </div>
+            <div id="off-campus">
+                <h3>Select your platform</h3>
+                <div id="platform-select">
+                    <a onclick="setplatform('windows')"><img src="img/windows.svg" alt="Windows logo"></a>
+                    <a onclick="setplatform('mac')"><img src="img/apple.svg" alt="Apple logo"></a>
+                    <a onclick="setplatform('linux')"><img src="img/tux.svg" alt="Linux penguin"></a>
+                </div>
+                <div id="windows">
+                    <h4>Windows</h4>
+                    <h5>VPN Connection (recommended)</h5>
+                    <p>The easiest method to connect is through the University's official <a href="https://www.york.ac.uk/it-services/services/vpn/">VPN</a>. You can set up the PulseSecure client with the instructions on the <a href="https://footprints.york.ac.uk/MRcgi/MRTicketPage.pl?MR=160254&PROJECTID=1">IT Services page.</a><br>
+
+                    <details>
+                        <summary><strong>SSH Tunnel (advanced)</strong></summary>
+                        <p>
+                            If you don't want to or can't use the VPN connection, you can use SSH instead with the following steps:
+                            <ol>
+                                <li>Register with the University <a href="https://www.york.ac.uk/it-services/services/ssh/">SSH service</a>. This usually involves emailing itsupport@york.ac.uk to ask to be added to the SSH service.</li>
+                                <!-- TODO: finish instructions for ssh.exe and PuTTY -->
+                            </ol>
+                        </p>
+                    </details>
+                    
+
+                </div>
+                <div id="mac">
+                    <h4>Mac</h4>
+                </div>
+                <div id="linux">
+                    <h4>Linux</h4>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <a href="https://shocksoc.org/"><img src="https://shocksoc.org/img/Banner/logo_white.png" alt="ShockSoc logo"></a>
