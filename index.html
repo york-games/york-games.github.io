@@ -37,16 +37,16 @@
                 </div>
                 <div id="windows">
                     <h4>Windows</h4>
-                    <h5>VPN Connection (recommended)</h5>
-                    <p>The easiest method to connect is through the University's official <a href="https://www.york.ac.uk/it-services/services/vpn/">VPN</a>. You can set up the PulseSecure client with the instructions on the <a href="https://footprints.york.ac.uk/MRcgi/MRTicketPage.pl?MR=160254&PROJECTID=1">IT Services page.</a><br>
+                    <h5>PulseSecure VPN (recommended)</h5>
+                    <p>The easiest method to connect is through the University's official <a href="https://www.york.ac.uk/it-services/services/vpn/">VPN</a>. You can set up the PulseSecure client with the instructions for Windows on the <a href="https://footprints.york.ac.uk/MRcgi/MRTicketPage.pl?MR=160254&PROJECTID=1">IT Services page.</a></p>
 
                     <details>
                         <summary><strong>SSH Tunnel (advanced)</strong></summary>
-                        <p>
-                            If you don't want to or can't use the VPN connection, you can use SSH instead with the following steps:
+                        <p>If you don't want to or can't use the VPN connection, you can use SSH instead with the following steps:
                             <ol>
-                                <li>Register with the University <a href="https://www.york.ac.uk/it-services/services/ssh/">SSH service</a>. This usually involves emailing itsupport@york.ac.uk to ask to be added to the SSH service.</li>
-                                <!-- TODO: finish instructions for ssh.exe and PuTTY -->
+                                <li>Register with the University <a href="https://www.york.ac.uk/it-services/services/ssh/">SSH service</a>. This usually involves emailing itsupport@york.ac.uk to ask to be added to the SSH service. You only need to do this once.</li>
+                                <li><strong>TODO</strong></li>
+                                <!-- TODO: finish instructions for ssh.exe and PuTTY depending on Windows version -->
                             </ol>
                         </p>
                     </details>
@@ -55,9 +55,44 @@
                 </div>
                 <div id="mac">
                     <h4>Mac</h4>
+                    <h5>PulseSecure VPN</h5>
+                    <p>The easiest method to connect is through the University's official <a href="https://www.york.ac.uk/it-services/services/vpn/">VPN</a>. You can set up the PulseSecure client with the instructions for Mac on the <a href="https://footprints.york.ac.uk/MRcgi/MRTicketPage.pl?MR=160232&PROJECTID=1">IT Services page.</a></p>
+
+                    <h5>SSH Tunnel</h5>
+                    <p>Using SSH on Mac doesn't require downloading any additional software.</p>
+                    <ol>
+                        <li>Register with the University <a href="https://www.york.ac.uk/it-services/services/ssh/">SSH service</a>. Email itsupport@york.ac.uk and ask to be added to the SSH service. You only need to do this once.</li>
+                        <li>Open a terminal and run the following command: <code>ssh -nfoProxyJump="&lt;username&gt;@ssh.york.ac.uk" &lt;server&gt; -L&lt;port&gt;:localhost:&lt;port&gt;</code>, replacing:
+                            <ul>
+                                <li><code>&lt;username&gt;</code> with your York ITS username (eg <code>abc500</code>). This is the same as the first part of your york.ac.uk email address</li>
+                                <li><code>&lt;server&gt;</code> with the <strong>server IP</strong> that you are connecting to (eg <code>mc.york.games</code>)</li>
+                                <li><code>&lt;port&gt;</code> with the <strong>port</strong> (eg <code>25565</code>)</li>
+                            </ul>
+                            After you input your password correctly, you can close the terminal and the tunnel will remain open until you disconnect from the network or shut down.</li>
+                        <li>When specifying the server address in-game, use <code>localhost</code> instead of the york.games server address.</li>
+                    </ol>
+                    <p>The SSH service accepts public key authentication, so you can add an SSH public key with <code>ssh-copy-id &lt;username&gt;@ssh.york.ac.uk</code> to connect without specifying your password each time.
                 </div>
                 <div id="linux">
                     <h4>Linux</h4>
+                    <h5>SSH Tunnel</h5>
+                    <p>Using SSH on Linux doesn't require downloading any additional software.</p>
+                    <ol>
+                        <li>Register with the University <a href="https://www.york.ac.uk/it-services/services/ssh/">SSH service</a>. Email itsupport@york.ac.uk and ask to be added to the SSH service. You only need to do this once.</li>
+                        <li>Open a terminal and run the following command: <code>ssh -nfoProxyJump="&lt;username&gt;@ssh.york.ac.uk" &lt;server&gt; -L&lt;port&gt;:localhost:&lt;port&gt;</code>, replacing:
+                            <ul>
+                                <li><code>&lt;username&gt;</code> with your York ITS username (eg <code>abc500</code>). This is the same as the first part of your york.ac.uk email address</li>
+                                <li><code>&lt;server&gt;</code> with the <strong>server IP</strong> that you are connecting to (eg <code>mc.york.games</code>)</li>
+                                <li><code>&lt;port&gt;</code> with the <strong>port</strong> (eg <code>25565</code>)</li>
+                            </ul>
+                            After you input your password correctly, you can close the terminal and the tunnel will remain open until you disconnect from the network or shut down.</li>
+                        <li>When specifying the server address in-game, use <code>localhost</code> instead of the york.games server address.</li>
+                    </ol>
+                    <p>The SSH service accepts public key authentication, so you can add an SSH public key with <code>ssh-copy-id &lt;username&gt;@ssh.york.ac.uk</code> to connect without specifying your password each time.</p>
+                        
+                    <h5>PulseSecure VPN</h5>
+                    <p>Alternatively, you can use the University's official <a href="https://www.york.ac.uk/it-services/services/vpn/">VPN</a> by following the instructions for Linux on the <a href="https://footprints.york.ac.uk/MRcgi/MRTicketPage.pl?MR=48664&PROJECTID=1">IT Services page.</a> In-game, use the server address and port as on the website.</p>
+
                 </div>
             </div>
         </div>
